@@ -1,10 +1,6 @@
 # Bound for the Peak
 
-This is an endless physics-based expedition up a mountain built in Godot 4.7.2 for Hack Club Terra Week 5, following the them "Peak".
-You control twin climbers tethered to each other on an infinite mountain that generates as you play. 
-You can only control one climber at a time, so strategically anchor and toss them up the mountain and ride air streams 
-while dodging falling icicles, jumping on fragile platforms, and more! You can only mess up three times before you fall for good.
-Try and climb as high as possible and plant your flag! You can retry to beat your personal best!
+This is an endless physics-based expedition up a mountain built in Godot 4.7.2 for Hack Club Terra Week 5, following the them "Peak". You control twin climbers tethered to each other on an infinite mountain that generates as you play.  You can only control one climber at a time, so strategically anchor and toss them up the mountain and ride air streams while dodging falling icicles, jumping on fragile platforms, and more! You can only mess up three times before you fall for good. Try and climb as high as possible and plant your flag! You can retry to beat your personal best!
 
 Play in your browser!: https://praneet-mudgala.github.io/Bound-for-the-Peak/
 
@@ -21,6 +17,7 @@ F: Toss up inactive climber (if both are unanchored and close to each other) and
 Esc: Pause menu
 
 3-Heart Lifesaver: A lifesaver will rescue you if you fall or take damage up to three times.
+Anchor Indicator: Watch for the green diamond over the active climber's head. It means you can anchor!
 
 ## Mountain Terrain
 
