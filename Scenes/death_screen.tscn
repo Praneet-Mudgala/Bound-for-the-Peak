@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://dmdv0qmo7nen4"]
+
+[ext_resource type="Script" uid="uid://bnlglp12ggjpp" path="res://Scenes/death_screen.gd" id="1_8hps1"]
+
+[node name="DeathScreen" type="Control" unique_id=1789594091]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_8hps1")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=632961782]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.3658371, 0.5327672, 0.6503085, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1102914788]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -249.0
+offset_top = 9.0
+offset_right = 249.0
+offset_bottom = 81.0
+grow_horizontal = 2
+theme_override_constants/separation = 10
+
+[node name="DeathLabel" type="Label" parent="VBoxContainer" unique_id=544752291]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 52
+text = "You fell!"
+
+[node name="StatsLabel" type="Label" parent="VBoxContainer" unique_id=1361825179]
+layout_mode = 2
+theme_override_constants/outline_size = 5
+theme_override_font_sizes/font_size = 32
+text = "Altitude reached: Xm
+Personal best: Xm
+Time survived: MM:SS.ms"
+
+[node name="RetryButton" type="Button" parent="VBoxContainer" unique_id=1096668832]
+layout_mode = 2
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 36
+text = "CLIMB AGAIN
+"
+
+[node name="MenuButton" type="Button" parent="VBoxContainer" unique_id=399877515]
+layout_mode = 2
+theme_override_constants/outline_size = 13
+theme_override_font_sizes/font_size = 36
+text = "MENU
+"

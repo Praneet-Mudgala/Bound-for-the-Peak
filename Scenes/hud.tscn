@@ -1,0 +1,147 @@
+[gd_scene format=3 uid="uid://3280rad80pxv"]
+
+[ext_resource type="Script" uid="uid://blok5v62bbifh" path="res://hud.gd" id="1_e0onf"]
+[ext_resource type="Texture2D" uid="uid://c8lu4fa11bdc3" path="res://Assets/intact_life_texture.png" id="2_fccik"]
+[ext_resource type="Texture2D" uid="uid://0gmbf385sjvq" path="res://Assets/broken_life_texture.png" id="3_bjfho"]
+[ext_resource type="Script" uid="uid://bkenphkk7l58h" path="res://Scenes/snow_layer.gd" id="4_6fbih"]
+
+[sub_resource type="FontVariation" id="FontVariation_8wotf"]
+
+[node name="HUD" type="CanvasLayer" unique_id=141600848]
+process_mode = 3
+script = ExtResource("1_e0onf")
+intact_life_texture = ExtResource("2_fccik")
+broken_life_texture = ExtResource("3_bjfho")
+
+[node name="SnowLayer" type="Control" parent="." unique_id=1729609203]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 2
+script = ExtResource("4_6fbih")
+
+[node name="LivesContainer" type="HBoxContainer" parent="." unique_id=1961078590]
+offset_left = 20.0
+offset_top = 16.0
+offset_right = 60.0
+offset_bottom = 56.0
+
+[node name="Life1" type="TextureRect" parent="LivesContainer" unique_id=905369640]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+texture = ExtResource("2_fccik")
+stretch_mode = 5
+
+[node name="Life2" type="TextureRect" parent="LivesContainer" unique_id=449849596]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+texture = ExtResource("2_fccik")
+stretch_mode = 5
+
+[node name="Life3" type="TextureRect" parent="LivesContainer" unique_id=2088051093]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 2
+texture = ExtResource("2_fccik")
+stretch_mode = 5
+
+[node name="HudLabel" type="Label" parent="." unique_id=1255978020]
+offset_left = 150.0
+offset_top = 16.0
+offset_right = 258.0
+offset_bottom = 50.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = SubResource("FontVariation_8wotf")
+theme_override_font_sizes/font_size = 24
+text = "Meters: 0"
+
+[node name="PauseOverlay" type="ColorRect" parent="." unique_id=1609724904]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = -216.0
+offset_right = 384.0
+offset_bottom = 216.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.435, 0.51233333, 0.58, 0.5882353)
+
+[node name="PauseBox" type="VBoxContainer" parent="PauseOverlay" unique_id=789861996]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -65.5
+offset_top = 5.0
+offset_right = 65.5
+offset_bottom = 52.0
+grow_horizontal = 2
+theme_override_constants/separation = 7
+
+[node name="PauseTitle" type="Label" parent="PauseOverlay/PauseBox" unique_id=876476575]
+layout_mode = 2
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 34
+text = "PAUSED"
+
+[node name="ResumeButton" type="Button" parent="PauseOverlay/PauseBox" unique_id=1254439233]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "RESUME"
+
+[node name="ControlsButton" type="Button" parent="PauseOverlay/PauseBox" unique_id=2069985325]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "CONTROLS
+"
+
+[node name="RetryButton" type="Button" parent="PauseOverlay/PauseBox" unique_id=57046750]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "RETRY"
+
+[node name="MenuButton" type="Button" parent="PauseOverlay/PauseBox" unique_id=1873872525]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "MENU
+"
+
+[node name="ControlsBox" type="VBoxContainer" parent="PauseOverlay" unique_id=857301058]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_top = 6.0
+offset_right = 20.0
+offset_bottom = 46.0
+grow_horizontal = 2
+theme_override_constants/separation = 10
+
+[node name="ControlsTitle" type="Label" parent="PauseOverlay/ControlsBox" unique_id=1332951092]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/outline_size = 6
+theme_override_font_sizes/font_size = 34
+text = "CONTROLS"
+
+[node name="ControlsText" type="Label" parent="PauseOverlay/ControlsBox" unique_id=1654815204]
+layout_mode = 2
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 23
+text = "A / D / W or Arrows: Walk / Jump or swing on rope / reel in
+Space: Anchor active climber and switch
+E: Switches without anchoring
+Q: Unanchors without switching
+F: Boost partner up while unanchored and close
+Avoid fragile ice that breaks under you, slippery blue ice that you "
+
+[node name="BackButton" type="Button" parent="PauseOverlay/ControlsBox" unique_id=1656170545]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "BACK"

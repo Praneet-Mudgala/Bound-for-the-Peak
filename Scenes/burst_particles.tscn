@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://fe7ijxqivjkn"]
+
+[ext_resource type="Script" uid="uid://ctshpw6oe2yu5" path="res://burst_particles.gd" id="1_bmdi3"]
+
+[node name="BurstParticles" type="CPUParticles2D" unique_id=791396014]
+emitting = false
+amount = 16
+lifetime = 0.3
+one_shot = true
+explosiveness = 0.9
+spread = 180.0
+gravity = Vector2(0, 400)
+initial_velocity_min = 90.0
+initial_velocity_max = 200.0
+scale_amount_min = 1.5
+scale_amount_max = 2.5
+script = ExtResource("1_bmdi3")

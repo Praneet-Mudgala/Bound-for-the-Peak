@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://dyjvi8ahaalgs"]
+
+[ext_resource type="Script" uid="uid://cykq3px1ludop" path="res://flag.gd" id="1_8kv76"]
+[ext_resource type="Texture2D" uid="uid://bnxbl74gkgwik" path="res://Assets/flag1.png" id="2_wskdx"]
+[ext_resource type="Texture2D" uid="uid://1qg1ad3k6ot2" path="res://Assets/flag2.png" id="3_7i8hx"]
+[ext_resource type="Texture2D" uid="uid://7gf8da818gsn" path="res://Assets/flag3.png" id="4_fpnkg"]
+[ext_resource type="Texture2D" uid="uid://dcmewkldsu075" path="res://Assets/flag4.png" id="5_pto30"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8wotf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_wskdx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7i8hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fpnkg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_pto30")
+}],
+"loop": 1,
+"name": &"Wave",
+"speed": 5.0
+}]
+
+[node name="Flag" type="Node2D" unique_id=683442329]
+scale = Vector2(3.5, 3.5)
+script = ExtResource("1_8kv76")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=898816893]
+sprite_frames = SubResource("SpriteFrames_8wotf")
+animation = &"Wave"
+autoplay = "Wave"
+
+[node name="HeightLabel" type="Label" parent="." unique_id=896548037]
+offset_left = -15.428574
+offset_top = -24.857147
+offset_right = 341.5714
+offset_bottom = 42.142853
+scale = Vector2(0.1, 0.1)
+theme_override_constants/outline_size = 15
+theme_override_font_sizes/font_size = 48
+text = "Base Camp: 0m"

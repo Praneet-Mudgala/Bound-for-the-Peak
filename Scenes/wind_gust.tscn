@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://bdm7xdgyvgwpk"]
+
+[ext_resource type="Script" uid="uid://ckr0b7be74t7o" path="res://wind_gust.gd" id="1_qcypv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wotf"]
+size = Vector2(36, 72)
+
+[node name="WindGust" type="Area2D" unique_id=1959372446]
+collision_mask = 2
+script = ExtResource("1_qcypv")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1952333023]
+offset_left = -18.0
+offset_top = -36.0
+offset_right = 18.0
+offset_bottom = 36.0
+mouse_filter = 2
+color = Color(0.7387, 0.8223916, 0.83, 0.1764706)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1035364674]
+shape = SubResource("RectangleShape2D_8wotf")

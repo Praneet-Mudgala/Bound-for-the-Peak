@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://brcd1wdiqyfao"]
+
+[ext_resource type="Script" uid="uid://daos1wmk0s46k" path="res://Scenes/climber.gd" id="1_y5duf"]
+[ext_resource type="Texture2D" uid="uid://buwrspdxrt2m4" path="res://Assets/climber_a anchored.png" id="2_y5duf"]
+[ext_resource type="Texture2D" uid="uid://ccwi8dsfpn0yl" path="res://Assets/climber_a idle1.png" id="3_6pxm8"]
+[ext_resource type="Texture2D" uid="uid://c5avsqkxylhs0" path="res://Assets/climber_a idle2.png" id="4_womfn"]
+[ext_resource type="Texture2D" uid="uid://iagjhgrs6t2a" path="res://Assets/climber_a jump.png" id="5_mxsqy"]
+[ext_resource type="Texture2D" uid="uid://2kacth4svh2b" path="res://Assets/climber_a walk1.png" id="6_oks8k"]
+[ext_resource type="Texture2D" uid="uid://b8b8687ovufka" path="res://Assets/climber_a walk2.png" id="7_q1dep"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8wotf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y5duf")
+}],
+"loop": 1,
+"name": &"Anchored",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_6pxm8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_womfn")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_mxsqy")
+}],
+"loop": 0,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_oks8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_q1dep")
+}],
+"loop": 0,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y5duf"]
+size = Vector2(23, 34)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wotf"]
+size = Vector2(29, 40)
+
+[node name="Climber" type="RigidBody2D" unique_id=1407143027 groups=["climbers"]]
+collision_layer = 2
+collision_mask = 5
+gravity_scale = 1.2
+lock_rotation = true
+contact_monitor = true
+max_contacts_reported = 4
+linear_damp = 0.5
+script = ExtResource("1_y5duf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=620452294]
+scale = Vector2(1.3, 1.3)
+sprite_frames = SubResource("SpriteFrames_8wotf")
+animation = &"Anchored"
+autoplay = "Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=615418818]
+visible = false
+position = Vector2(-0.5, 1)
+scale = Vector2(1.3, 1.3)
+shape = SubResource("RectangleShape2D_y5duf")
+
+[node name="WallDetector" type="Area2D" parent="." unique_id=432002319]
+scale = Vector2(1.3, 1.3)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetector" unique_id=1825817647]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_8wotf")

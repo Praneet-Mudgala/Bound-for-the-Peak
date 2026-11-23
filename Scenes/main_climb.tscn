@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://bv2b1ugl641r5"]
+
+[ext_resource type="Script" uid="uid://1ix13c8t83rf" path="res://Scenes/main_climb.gd" id="1_lavcs"]
+[ext_resource type="PackedScene" uid="uid://668w0fw8ulrr" path="res://Scenes/chunk_1.tscn" id="2_24awa"]
+[ext_resource type="PackedScene" uid="uid://cmr2pa1ucyds7" path="res://Scenes/background.tscn" id="2_80wea"]
+[ext_resource type="PackedScene" uid="uid://brcd1wdiqyfao" path="res://Scenes/climber.tscn" id="3_kcjhq"]
+[ext_resource type="PackedScene" uid="uid://mna3d1ygsrut" path="res://Scenes/chunk_2.tscn" id="3_nykv2"]
+[ext_resource type="Texture2D" uid="uid://c0r1o8jdk1j8g" path="res://Assets/lifesaver.png" id="3_uxfh2"]
+[ext_resource type="PackedScene" uid="uid://3280rad80pxv" path="res://Scenes/hud.tscn" id="4_0uu7y"]
+[ext_resource type="PackedScene" uid="uid://bx1pewpcjffqf" path="res://Scenes/chunk_3.tscn" id="4_083hb"]
+[ext_resource type="Texture2D" uid="uid://c0wpeteep7kx8" path="res://Assets/climber_b anchored.png" id="4_y6mm0"]
+[ext_resource type="Texture2D" uid="uid://b2vj6g82ehlo" path="res://Assets/climber_b idle2.png" id="5_vhq26"]
+[ext_resource type="Texture2D" uid="uid://c1so7prmjwd61" path="res://Assets/climber_b idle1.png" id="6_24awa"]
+[ext_resource type="Texture2D" uid="uid://baks444isu7n3" path="res://Assets/climber_b jump.png" id="7_0uu7y"]
+[ext_resource type="Texture2D" uid="uid://47hytu57rbnd" path="res://Assets/climber_b walk2.png" id="8_uxfh2"]
+[ext_resource type="Texture2D" uid="uid://57e6qns2d8ua" path="res://Assets/climber_b walk1.png" id="9_4rrqg"]
+[ext_resource type="PackedScene" uid="uid://cbkebx510uam5" path="res://Scenes/base_camp.tscn" id="11_0uu7y"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nykv2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_y6mm0")
+}],
+"loop": 1,
+"name": &"Anchored",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_vhq26")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_24awa")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_0uu7y")
+}],
+"loop": 0,
+"name": &"Jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_uxfh2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4rrqg")
+}],
+"loop": 0,
+"name": &"Walk",
+"speed": 5.0
+}]
+
+[node name="MainClimb" type="Node2D" unique_id=985338692]
+script = ExtResource("1_lavcs")
+mountain_chunks = Array[PackedScene]([ExtResource("2_24awa"), ExtResource("3_nykv2"), ExtResource("4_083hb")])
+lifesaver_texture = ExtResource("3_uxfh2")
+
+[node name="Background" parent="." unique_id=436060723 instance=ExtResource("2_80wea")]
+
+[node name="ClimberA" parent="." unique_id=1407143027 instance=ExtResource("3_kcjhq")]
+position = Vector2(184, 580)
+
+[node name="ClimberB" parent="." unique_id=1737919657 instance=ExtResource("3_kcjhq")]
+position = Vector2(70, 580)
+
+[node name="AnimatedSprite2D" parent="ClimberB" index="0" unique_id=620452294]
+sprite_frames = SubResource("SpriteFrames_nykv2")
+animation = &"Idle"
+
+[node name="RopeLine" type="Line2D" parent="." unique_id=758859614]
+width = 4.0
+default_color = Color(0.8419777, 0.68901813, 0.40246856, 1)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=719658234]
+position = Vector2(503, 311)
+
+[node name="BaseCamp" parent="." unique_id=2127343395 instance=ExtResource("11_0uu7y")]
+
+[node name="HUD" parent="." unique_id=141600848 instance=ExtResource("4_0uu7y")]
+
+[editable path="ClimberB"]

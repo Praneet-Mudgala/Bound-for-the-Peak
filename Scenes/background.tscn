@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://cmr2pa1ucyds7"]
+
+[ext_resource type="Texture2D" uid="uid://bq58cxebbtktn" path="res://Assets/para background 1.png" id="1_ltlj5"]
+[ext_resource type="Script" uid="uid://b61gpo1cwutcy" path="res://Scenes/background.gd" id="1_pojwb"]
+[ext_resource type="Texture2D" uid="uid://bj0nea3wthaw" path="res://Assets/para layer 2.png" id="2_rymcx"]
+[ext_resource type="Texture2D" uid="uid://dliqqh0nq1ueh" path="res://Assets/para layer 3.png" id="3_42s4r"]
+[ext_resource type="Texture2D" uid="uid://cxhfx7qk8orob" path="res://Assets/para layer 4.png" id="4_kopta"]
+[ext_resource type="Texture2D" uid="uid://bhs7obf6lks61" path="res://Assets/para layer 1.png" id="5_wi0l6"]
+
+[node name="Background" type="Node2D" unique_id=436060723]
+script = ExtResource("1_pojwb")
+
+[node name="Sky" type="Sprite2D" parent="." unique_id=1118512889]
+texture = ExtResource("1_ltlj5")
+centered = false
+
+[node name="FarMountains" type="Sprite2D" parent="." unique_id=2043460234]
+texture = ExtResource("2_rymcx")
+centered = false
+
+[node name="NearMountains" type="Sprite2D" parent="." unique_id=1834521298]
+texture = ExtResource("5_wi0l6")
+centered = false
+
+[node name="BackClouds" type="Sprite2D" parent="." unique_id=251845986]
+texture = ExtResource("3_42s4r")
+centered = false
+
+[node name="FrontClouds" type="Sprite2D" parent="." unique_id=2018206599]
+texture = ExtResource("4_kopta")
+centered = false

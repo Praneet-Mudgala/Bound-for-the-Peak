@@ -1,0 +1,129 @@
+[gd_scene format=4 uid="uid://bx1pewpcjffqf"]
+
+[ext_resource type="TileSet" uid="uid://bfejwlfe0ho06" path="res://Scenes/mountain_tileset.tres" id="1_xkdqh"]
+[ext_resource type="PackedScene" uid="uid://j4cj43n07ep1" path="res://Scenes/fragile_ice.tscn" id="2_1u80q"]
+[ext_resource type="PackedScene" uid="uid://bdm7xdgyvgwpk" path="res://Scenes/wind_gust.tscn" id="3_e4tgv"]
+[ext_resource type="PackedScene" uid="uid://ctjks8ctaqbep" path="res://Scenes/falling_ice.tscn" id="4_co7us"]
+
+[node name="Chunk3" type="Node2D" unique_id=1560797267]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=304035516]
+tile_map_data = PackedByteArray("AAAAABAAAQAAAAAAAAABABAAAQAAAAAAAAACABAAAQAAAAAAAAADABAAAQAAAAAAAAAfABAAAQAAAAAAAAAeABAAAQAAAAAAAAAdABAAAQAAAAAAAAAcABAAAQAAAAAAAAAGABAAAQAAAAAAAAAHABAAAQAAAAAAAAAIABAAAQAAAAAAAAAZABAAAQAAAAAAAAAYABAAAQAAAAAAAAAXABAAAQAAAAAAAAAUABAAAQAAAAAAAAATABAAAQAAAAAAAAALABAAAQAAAAAAAAAMABAAAQAAAAAAAAAPABAAAQAAAAAAAAAQABAAAQAAAAAAAAANAAoAAQAAAAAAAAASAAoAAQAAAAAAAAALAAoAAQACAAEAAAAKAAoAAQACAAEAAAAGAAoAAQACAAEAAAAHAAoAAQACAAEAAAADAAoAAQACAAEAAAACAAoAAQACAAEAAAAUAAoAAQACAAEAAAAVAAoAAQACAAEAAAAYAAoAAQACAAEAAAAZAAoAAQACAAEAAAAcAAoAAQACAAEAAAAdAAoAAQACAAEAAAAdAAYAAQAAAAAAAAABAAgAAQAAAAAAAAADAAYAAQAAAAAAAAAFAAUAAQAAAAAAAAAHAAQAAQAAAAAAAAAJAAQAAQAAAAAAAAALAAQAAQAAAAAAAAANAAMAAQAAAAAAAAAPAAIAAQAAAAAAAAARAAEAAQAAAAAAAAAFAAIAAQAAAAAAAAADAAEAAQAAAAAAAAABAAEAAQAAAAAAAAASAAEAAQAAAAAAAAA=")
+tile_set = ExtResource("1_xkdqh")
+
+[node name="FragileIce Group" type="Node2D" parent="." unique_id=1028437028]
+
+[node name="FragileIce" parent="FragileIce Group" unique_id=542493528 instance=ExtResource("2_1u80q")]
+position = Vector2(828, 328)
+
+[node name="FragileIce8" parent="FragileIce Group" unique_id=315890635 instance=ExtResource("2_1u80q")]
+position = Vector2(182, 326)
+
+[node name="FragileIce9" parent="FragileIce Group" unique_id=1169340260 instance=ExtResource("2_1u80q")]
+position = Vector2(323, 320)
+
+[node name="FragileIce2" parent="FragileIce Group" unique_id=715177806 instance=ExtResource("2_1u80q")]
+position = Vector2(978, 324)
+
+[node name="FragileIce3" parent="FragileIce Group" unique_id=91070925 instance=ExtResource("2_1u80q")]
+position = Vector2(1113, 309)
+
+[node name="FragileIce4" parent="FragileIce Group" unique_id=1960550949 instance=ExtResource("2_1u80q")]
+position = Vector2(993, 186)
+
+[node name="FragileIce5" parent="FragileIce Group" unique_id=30999220 instance=ExtResource("2_1u80q")]
+position = Vector2(915, 141)
+
+[node name="FragileIce6" parent="FragileIce Group" unique_id=763184539 instance=ExtResource("2_1u80q")]
+position = Vector2(829, 100)
+
+[node name="FragileIce7" parent="FragileIce Group" unique_id=2057275610 instance=ExtResource("2_1u80q")]
+position = Vector2(751, 64)
+
+[node name="WindGust Group" type="Node2D" parent="." unique_id=868068337]
+
+[node name="WindGust" parent="WindGust Group" unique_id=1959372446 instance=ExtResource("3_e4tgv")]
+position = Vector2(558, 542)
+
+[node name="WindGust3" parent="WindGust Group" unique_id=943853703 instance=ExtResource("3_e4tgv")]
+position = Vector2(558, 470)
+
+[node name="WindGust4" parent="WindGust Group" unique_id=511671630 instance=ExtResource("3_e4tgv")]
+position = Vector2(594, 470)
+
+[node name="WindGust5" parent="WindGust Group" unique_id=206222237 instance=ExtResource("3_e4tgv")]
+position = Vector2(594, 398)
+
+[node name="WindGust6" parent="WindGust Group" unique_id=616113315 instance=ExtResource("3_e4tgv")]
+position = Vector2(558, 398)
+
+[node name="WindGust2" parent="WindGust Group" unique_id=1477328308 instance=ExtResource("3_e4tgv")]
+position = Vector2(594, 542)
+
+[node name="FallingIce Group" type="Node2D" parent="." unique_id=1911877509]
+
+[node name="FallingIce" parent="FallingIce Group" unique_id=1695863626 instance=ExtResource("4_co7us")]
+position = Vector2(486, 414)
+
+[node name="FallingIce8" parent="FallingIce Group" unique_id=1759700998 instance=ExtResource("4_co7us")]
+position = Vector2(666, 414)
+
+[node name="FallingIce16" parent="FallingIce Group" unique_id=1135029935 instance=ExtResource("4_co7us")]
+position = Vector2(415, 198)
+
+[node name="FallingIce17" parent="FallingIce Group" unique_id=1678154223 instance=ExtResource("4_co7us")]
+position = Vector2(342, 198)
+
+[node name="FallingIce18" parent="FallingIce Group" unique_id=301537642 instance=ExtResource("4_co7us")]
+position = Vector2(270, 198)
+
+[node name="FallingIce19" parent="FallingIce Group" unique_id=232673282 instance=ExtResource("4_co7us")]
+position = Vector2(54, 90)
+
+[node name="CollisionShape2D3" parent="FallingIce Group/FallingIce19/TriggerZone" parent_id_path=PackedInt32Array(232673282, 644154022) index="2" unique_id=411238805]
+position = Vector2(0, 100.5)
+
+[node name="FallingIce15" parent="FallingIce Group" unique_id=989220284 instance=ExtResource("4_co7us")]
+position = Vector2(485, 162)
+
+[node name="CollisionShape2D3" parent="FallingIce Group/FallingIce15/TriggerZone" parent_id_path=PackedInt32Array(989220284, 644154022) index="2" unique_id=411238805]
+position = Vector2(0, 100.5)
+
+[node name="FallingIce2" parent="FallingIce Group" unique_id=498116972 instance=ExtResource("4_co7us")]
+position = Vector2(415, 414)
+
+[node name="FallingIce3" parent="FallingIce Group" unique_id=1519496575 instance=ExtResource("4_co7us")]
+position = Vector2(378, 414)
+
+[node name="FallingIce4" parent="FallingIce Group" unique_id=2143085309 instance=ExtResource("4_co7us")]
+position = Vector2(274, 414)
+
+[node name="FallingIce5" parent="FallingIce Group" unique_id=1334193632 instance=ExtResource("4_co7us")]
+position = Vector2(237, 414)
+
+[node name="FallingIce6" parent="FallingIce Group" unique_id=439376643 instance=ExtResource("4_co7us")]
+position = Vector2(125, 415)
+
+[node name="FallingIce7" parent="FallingIce Group" unique_id=602831868 instance=ExtResource("4_co7us")]
+position = Vector2(94, 415)
+
+[node name="FallingIce9" parent="FallingIce Group" unique_id=459137421 instance=ExtResource("4_co7us")]
+position = Vector2(1063, 414)
+
+[node name="FallingIce10" parent="FallingIce Group" unique_id=936927161 instance=ExtResource("4_co7us")]
+position = Vector2(1026, 414)
+
+[node name="FallingIce11" parent="FallingIce Group" unique_id=1434066953 instance=ExtResource("4_co7us")]
+position = Vector2(922, 414)
+
+[node name="FallingIce12" parent="FallingIce Group" unique_id=435756528 instance=ExtResource("4_co7us")]
+position = Vector2(885, 414)
+
+[node name="FallingIce13" parent="FallingIce Group" unique_id=1247693522 instance=ExtResource("4_co7us")]
+position = Vector2(773, 415)
+
+[node name="FallingIce14" parent="FallingIce Group" unique_id=1317562833 instance=ExtResource("4_co7us")]
+position = Vector2(742, 415)
+
+[editable path="FallingIce Group/FallingIce19"]
+[editable path="FallingIce Group/FallingIce15"]

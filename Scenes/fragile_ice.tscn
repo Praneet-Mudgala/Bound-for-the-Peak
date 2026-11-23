@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://j4cj43n07ep1"]
+
+[ext_resource type="Script" uid="uid://csw7fggvyy7yi" path="res://Scenes/fragile_ice.gd" id="1_27hoq"]
+[ext_resource type="Texture2D" uid="uid://cqn6e1r5lcl1h" path="res://Assets/fragileIce.png" id="2_6a2ty"]
+[ext_resource type="Texture2D" uid="uid://danrwblmf6x84" path="res://Assets/fragileIceBroken.png" id="2_y6xod"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8wotf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_y6xod")
+}],
+"loop": 0,
+"name": &"Broken",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_6a2ty")
+}],
+"loop": 1,
+"name": &"Normal",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wotf"]
+size = Vector2(36, 36)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hwggs"]
+size = Vector2(38, 38)
+
+[node name="FragileIce" type="StaticBody2D" unique_id=542493528]
+script = ExtResource("1_27hoq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=664469007]
+sprite_frames = SubResource("SpriteFrames_8wotf")
+animation = &"Normal"
+autoplay = "Normal"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1471969384]
+shape = SubResource("RectangleShape2D_8wotf")
+
+[node name="TouchDetector" type="Area2D" parent="." unique_id=1781401185]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TouchDetector" unique_id=1673920078]
+visible = false
+shape = SubResource("RectangleShape2D_hwggs")

@@ -1,0 +1,43 @@
+[gd_resource type="TileSet" format=3 uid="uid://bfejwlfe0ho06"]
+
+[ext_resource type="Texture2D" uid="uid://6pji7d1klmpy" path="res://Assets/mountain tileset-export.png" id="1_ul7ox"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tx5wu"]
+friction = 0.05
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qe1kb"]
+texture = ExtResource("1_ul7ox")
+texture_region_size = Vector2i(36, 36)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(6.7177067, -18, 18, -18, 18, 18, 6.717705, 18)
+3:0/0 = 0
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(6.9043045, -18, 18, -18, 18, 18, 7.090908, 14.555027)
+4:0/0 = 0
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(6.157894, -16.421057, 18, -18, 18, 18, 6.3444977, 18)
+5:0/0 = 0
+5:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, 18, -18, 18, -6.717705, -18, -7.2775154)
+6:0/0 = 0
+6:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, 18, -18, 18, -6.9043083, -14.181824, -6.3444977)
+7:0/0 = 0
+7:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, 18, -18, 14.555023, -6.9043083, -18, -6.531101)
+8:0/0 = 0
+8:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, -5.9712944, -18, -5.598089, 18, -18, 18)
+9:0/0 = 0
+9:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, -6.531105, -18, -6.531105, 15.674644, -18, 18)
+10:0/0 = 0
+10:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-18, -18, -6.3445015, -15.114836, -5.784693, 18, -18, 18)
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/physics_layer_1/polygon_0/points = PackedVector2Array(-18, -18, 18, -18, 18, 18, -18, 18)
+
+[resource]
+tile_size = Vector2i(36, 36)
+physics_layer_0/collision_layer = 1
+physics_layer_1/collision_layer = 4
+physics_layer_1/physics_material = SubResource("PhysicsMaterial_tx5wu")
+sources/1 = SubResource("TileSetAtlasSource_qe1kb")

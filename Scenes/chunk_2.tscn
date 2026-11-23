@@ -1,0 +1,75 @@
+[gd_scene format=4 uid="uid://mna3d1ygsrut"]
+
+[ext_resource type="TileSet" uid="uid://bfejwlfe0ho06" path="res://Scenes/mountain_tileset.tres" id="1_0l3bu"]
+[ext_resource type="PackedScene" uid="uid://j4cj43n07ep1" path="res://Scenes/fragile_ice.tscn" id="2_d1xgp"]
+[ext_resource type="PackedScene" uid="uid://bdm7xdgyvgwpk" path="res://Scenes/wind_gust.tscn" id="3_scd4p"]
+[ext_resource type="PackedScene" uid="uid://ctjks8ctaqbep" path="res://Scenes/falling_ice.tscn" id="4_1657c"]
+
+[node name="Chunk2" type="Node2D" unique_id=531896630]
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=425798177]
+tile_map_data = PackedByteArray("AAAdABAAAQAAAAAAAAAeABAAAQAAAAAAAAAfABAAAQAAAAAAAAAAABAAAQAAAAAAAAABABAAAQAAAAAAAAACABAAAQAAAAAAAAAJABAAAQAAAAAAAAAIABAAAQAAAAAAAAAHABAAAQAAAAAAAAASABAAAQAAAAAAAAATABAAAQAAAAAAAAAUABAAAQAAAAAAAAAOABAAAQAAAAAAAAANABAAAQAAAAAAAAAAAA8AAQAAAAEAAAAAAA4AAQAAAAEAAAAAAA0AAQAAAAEAAAAAAAwAAQAAAAAAAAACAAsAAQAAAAAAAAAEAAkAAQAAAAAAAAAEAAoAAQABAAAAAAAcAA0AAQAAAAAAAAAbAA0AAQABAAAAAAAbAAwAAQABAAAAAAAbAAsAAQABAAAAAAAbAAoAAQAAAAAAAAAaAAoAAQACAAEAAAAZAAoAAQACAAEAAAAbAA4AAQAFAAAAAAAcAA4AAQAFAAAAAAAfABEAAQAHAAAAAAAeABEAAQAFAAAAAAAdABEAAQAGAAAAAAAUABEAAQAHAAAAAAATABEAAQAFAAAAAAASABEAAQAGAAAAAAAOABEAAQAHAAAAAAANABEAAQAGAAAAAAAJABEAAQAHAAAAAAAIABEAAQAFAAAAAAAHABEAAQAGAAAAAAAAABEAAQAGAAAAAAABABEAAQAFAAAAAAACABEAAQAHAAAAAAAHAA8AAQACAAEAAAAGAA4AAQAAAAAAAAAFAAwAAQAAAAAAAAAFAA0AAQABAAAAAAALAA8AAQABAAAAAAALAA4AAQABAAAAAAALAA0AAQABAAAAAAALAAwAAQAAAAAAAAAQAA8AAQABAAAAAAAQAA4AAQABAAAAAAAQAA0AAQABAAAAAAAQAAwAAQAAAAAAAAAMAAsAAQACAAEAAAANAAsAAQACAAEAAAAMAAwAAQAFAAAAAAANAAwAAQAFAAAAAAARAAsAAQAAAAAAAAASAAsAAQAAAAAAAAAYAAoAAQAAAAAAAAAWAAkAAQAAAAAAAAAUAAkAAQAAAAAAAAASAAkAAQAAAAAAAAAQAAgAAQAAAAAAAAAKAAoAAQAAAAAAAAAJAAgAAQAAAAAAAAAOAAcAAQAAAAAAAAAMAAcAAQAAAAAAAAAGAAcAAQAAAAAAAAAIAAYAAQAAAAAAAAAdAAkAAQAAAAAAAAAUAAEAAQACAAEAAAASAAEAAQACAAEAAAAKAAEAAQACAAEAAAAIAAEAAQACAAEAAAAKAAUAAQAAAAAAAAAMAAQAAQAAAAAAAAAOAAMAAQAAAAAAAAAOAAEAAQAAAAAAAAAMAAEAAQAAAAAAAAAQAAEAAQAAAAAAAAAEAAUAAQAAAAAAAAACAAQAAQAAAAAAAAAAAAIAAQAAAAAAAAACAAEAAQAAAAAAAAAEAAEAAQACAAEAAAAFAAEAAQACAAEAAAA=")
+tile_set = ExtResource("1_0l3bu")
+
+[node name="FragileIce Group" type="Node2D" parent="." unique_id=363638392]
+
+[node name="FragileIce" parent="FragileIce Group" unique_id=542493528 instance=ExtResource("2_d1xgp")]
+position = Vector2(1098, 269)
+
+[node name="FragileIce2" parent="FragileIce Group" unique_id=733499803 instance=ExtResource("2_d1xgp")]
+position = Vector2(1026, 198)
+
+[node name="FragileIce3" parent="FragileIce Group" unique_id=696524393 instance=ExtResource("2_d1xgp")]
+position = Vector2(954, 126)
+
+[node name="FragileIce4" parent="FragileIce Group" unique_id=1918853517 instance=ExtResource("2_d1xgp")]
+position = Vector2(883, 87)
+
+[node name="FragileIce5" parent="FragileIce Group" unique_id=536835927 instance=ExtResource("2_d1xgp")]
+position = Vector2(810, 54)
+
+[node name="WindGust Group" type="Node2D" parent="." unique_id=1359739888]
+
+[node name="WindGust" parent="WindGust Group" unique_id=1959372446 instance=ExtResource("3_scd4p")]
+position = Vector2(1062, 541)
+
+[node name="FallingIce Group" type="Node2D" parent="." unique_id=522102395]
+
+[node name="FallingIce" parent="FallingIce Group" unique_id=1695863626 instance=ExtResource("4_1657c")]
+position = Vector2(953, 162)
+
+[node name="FallingIce2" parent="FallingIce Group" unique_id=1925398150 instance=ExtResource("4_1657c")]
+position = Vector2(738, 90)
+
+[node name="CollisionShape2D3" parent="FallingIce Group/FallingIce2/TriggerZone" parent_id_path=PackedInt32Array(1925398150, 644154022) index="2" unique_id=411238805]
+position = Vector2(0, 137.5)
+
+[node name="FallingIce6" parent="FallingIce Group" unique_id=1054477355 instance=ExtResource("4_1657c")]
+position = Vector2(89, 199)
+
+[node name="CollisionShape2D3" parent="FallingIce Group/FallingIce6/TriggerZone" parent_id_path=PackedInt32Array(1054477355, 644154022) index="2" unique_id=411238805]
+position = Vector2(0, 100.5)
+
+[node name="FallingIce3" parent="FallingIce Group" unique_id=1350201116 instance=ExtResource("4_1657c")]
+position = Vector2(666, 90)
+
+[node name="CollisionShape2D3" parent="FallingIce Group/FallingIce3/TriggerZone" parent_id_path=PackedInt32Array(1350201116, 644154022) index="2" unique_id=411238805]
+position = Vector2(0, 137.5)
+
+[node name="FallingIce4" parent="FallingIce Group" unique_id=262328459 instance=ExtResource("4_1657c")]
+position = Vector2(810, 90)
+
+[node name="CollisionShape2D3" parent="FallingIce Group/FallingIce4/TriggerZone" parent_id_path=PackedInt32Array(262328459, 644154022) index="2" unique_id=411238805]
+position = Vector2(0, 137.5)
+
+[node name="FallingIce5" parent="FallingIce Group" unique_id=175328287 instance=ExtResource("4_1657c")]
+position = Vector2(883, 123)
+
+[node name="CollisionShape2D3" parent="FallingIce Group/FallingIce5/TriggerZone" parent_id_path=PackedInt32Array(175328287, 644154022) index="2" unique_id=411238805]
+position = Vector2(0, 137.5)
+
+[editable path="FallingIce Group/FallingIce2"]
+[editable path="FallingIce Group/FallingIce6"]
+[editable path="FallingIce Group/FallingIce3"]
+[editable path="FallingIce Group/FallingIce4"]
+[editable path="FallingIce Group/FallingIce5"]
