@@ -154,6 +154,8 @@ func handle_fall() -> void:
 	despawn_lifesaver(rescue_ledge)
 
 func despawn_lifesaver(ledge: StaticBody2D) -> void:
+	if not is_inside_tree():
+		return
 	await get_tree().create_timer(3.5).timeout
 	if not is_instance_valid(ledge):
 		return

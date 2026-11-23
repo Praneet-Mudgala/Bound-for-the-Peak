@@ -49,4 +49,4 @@ func lose_life() -> void:
 	life_lost.emit()
 	if lives <= 0:
 		stop_run()
-		get_tree().change_scene_to_file("res://scenes/death_screen.tscn")
+		get_tree().change_scene_to_file("res://Scenes/death_screen.tscn")
