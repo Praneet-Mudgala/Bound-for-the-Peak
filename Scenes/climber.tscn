@@ -83,3 +83,13 @@ scale = Vector2(1.3, 1.3)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallDetector" unique_id=1825817647]
 position = Vector2(-0.5, 1)
 shape = SubResource("RectangleShape2D_8wotf")
+
+[node name="AnchorIndicator" type="Polygon2D" parent="." unique_id=757316857]
+z_index = 10
+position = Vector2(-14.000004, -17.000002)
+rotation = 0.7853982
+scale = Vector2(0.5, 0.5)
+color = Color(0.48179704, 0.8551119, 0.4714927, 1)
+texture_scale = Vector2(0.5, 0.5)
+texture_rotation = 0.7853982
+polygon = PackedVector2Array(-6.3639603, -45.961945, -4.2426376, -33.941128, 9.19239, -30.405594, 5.6568565, -43.840622)

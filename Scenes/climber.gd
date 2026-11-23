@@ -18,6 +18,9 @@ func _ready() -> void:
 	can_sleep = false
 
 func _process(delta: float) -> void:
+	if has_node("AnchorIndicator"):
+		$AnchorIndicator.visible = is_active and not is_anchored and can_anchor()
+	
 	if is_anchored:
 		anchor_timer += delta
 		
