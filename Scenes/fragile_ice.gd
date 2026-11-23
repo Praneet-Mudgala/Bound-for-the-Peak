@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-@export var break_delay: float = 3.5
+@export var break_delay: float = 2.0
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 @onready var collision: CollisionShape2D = $CollisionShape2D
